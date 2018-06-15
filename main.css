@@ -16,4 +16,102 @@
     font-family: 'Roboto', sans-serif;
 }
 
+nav{
+    background: linear-gradient(-45deg, rgba(143, 0, 26, 1),rgba(34, 116, 165, 1));
+    width: 20%;
+    height: 100%;
+    border-radius: 2px;
+    
+}
+
+#nav_widgets{
+    /*background-color: rgba(50, 50, 50, 0.2);*/
+    padding: 3%;
+    width: 90%;
+    height: 10%;
+    color: white;
+    font-size: 40px;
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 4px;
+}
+#time{
+    text-align: right;
+}
+#weather{
+    text-align: center;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+.nav_button{
+    width: 95%;
+    height: 50px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    box-shadow: 1px;
+    background: rgba(0,0,0,0);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin: 5px;
+    
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    
+    
+}
+.nav_button:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.nav_button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.marqueeBar{
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    height: 30px;
+    position: fixed;
+    z-index: -1;
+    text-align: center;
+    
+}
+marquee{
+    padding-top: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+}
+
+.bg{
+    position: fixed;
+    z-index: -2;
+    right: -300;
+    bottom: -300;
+    min-width: 100%; 
+    min-height: 100%;
+
+}
+
 /*html { cursor: none; }*/
