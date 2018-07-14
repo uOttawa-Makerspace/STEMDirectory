@@ -39,10 +39,21 @@
                 <input type="button" value="SANDBOX" class="nav_button" onClick="">
                 <input type="button" value="SIMON NEHME DESIGN COMMONS" class="nav_button" onClick="">
                 <input type="button" value="E-HUB" class="nav_button" onClick="">
-                <input type="button" value="STARBUCKS" class="nav_button" onClick="">
+                <input type="button" value="STARBUCKS" style="color:lawngreen; border-color: lawngreen;" class="nav_button" onClick="">
                 <hr>
+                <input id="ocshed" type="button" value="OC Transpo Schedules" class="special_button" onClick="">
             </center>
         </nav>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" style="margin: 10px;">&times;</span>
+                <p style="margin: 10px;">OC Transpo Schedule at stop <i>KING EDWARD & TEMPLETON (6782)</i>:</p>
+                
+            </div>
+        </div>
+
     
     </body>
     
@@ -91,8 +102,41 @@
         }
         startTime();
         
+        
+        //Modal
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("ocshed");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        
+        
     
     </script>
     <!--<img class="bg" src="images/floorplan.jpg">-->
+    
+    <!-- Scripts -->
+    <script type="text/javascript" src="assets/js/twitterFetcher_min.js"></script>
+    <script type="text/javascript" src="assets/js/exampleUsage.js"></script>
 
 </html>
