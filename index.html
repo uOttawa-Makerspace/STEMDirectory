@@ -22,7 +22,7 @@
     
     <body>
         <div class="marqueeBar">
-            <marquee>This is a test banner scrolling news information etc.This is a test banner scrolling news information etc.</marquee>
+            <marquee id="news"></marquee>
         </div>
         <nav>
             <center>
@@ -39,7 +39,7 @@
                 <input type="button" value="SANDBOX" class="nav_button" onClick="">
                 <input type="button" value="SIMON NEHME DESIGN COMMONS" class="nav_button" onClick="">
                 <input type="button" value="E-HUB" class="nav_button" onClick="">
-                <input type="button" value="STARBUCKS" style="color:lawngreen; border-color: lawngreen;" class="nav_button" onClick="">
+                <input type="button" value="MAKERSTORE" style="color:lawngreen; border-color: lawngreen;" class="nav_button" onClick="">
                 <hr>
                 <input id="ocshed" type="button" value="OC Transpo Schedules" class="special_button" onClick="">
             </center>
@@ -58,6 +58,19 @@
     </body>
     
     <script>
+        
+        var newsScroll = document.getElementById("news");
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var obj = JSON.parse(this.responseText);
+                for(var i=0; i<obj.news.length;i++){
+                    newsScroll.innerHTML = newsScroll.innerHTML + "\240\240\240\240\240\u2605\240\240\240\240\240" + obj.news[i];
+                }
+            }
+        };
+        xmlhttp.open("GET", "assets/data/news.txt", true);
+        xmlhttp.send();
         
         function closeVid(){
             var element = document.getElementById("videoPlayer");
@@ -129,6 +142,8 @@
                 modal.style.display = "none";
             }
         }
+        
+        
         
         
     
