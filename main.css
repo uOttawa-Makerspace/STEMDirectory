@@ -1,9 +1,15 @@
+body, html { 
+    overflow-x: hidden; 
+    overflow-y: hidden;
+}
+
 #videoPlayer {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%; 
     min-height: 100%;
+    z-index: 1;
 }
 
 #vidOverlay{
@@ -14,6 +20,13 @@
     width: 100%;
     padding: 20px;
     font-family: 'Roboto', sans-serif;
+    z-index: 2;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 nav{
@@ -21,8 +34,15 @@ nav{
     width: 20%;
     height: 100%;
     border-radius: 2px;
+    position: absolute;
+    z-index: 0;
     
 }
+
+map{
+    object-fit: cover;
+}
+
 
 #nav_widgets{
     /*background-color: rgba(50, 50, 50, 0.2);*/
@@ -112,7 +132,7 @@ hr{
     width: 100%;
     background-color: rgba(0,0,0,0.5);
     height: 30px;
-    position: fixed;
+    position: absolute;
     z-index: -1;
     text-align: center;
     
@@ -121,6 +141,7 @@ marquee{
     padding-top: 5px;
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
+    z-index: -2;
 }
 
 .bg{
@@ -199,6 +220,8 @@ marquee{
     cursor: pointer;
 }
 
-
+html{
+    background-color: #D9D9D9;
+}
 
 /*html { cursor: none; }*/

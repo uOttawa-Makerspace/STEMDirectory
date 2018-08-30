@@ -31,7 +31,7 @@
                     <div id="time"></div>
                 </div>
                 <hr>
-                <input type="button" value="MAKERSPACE" class="nav_button" onClick="">
+                <input type="button" value="MAKERSPACE" class="nav_button" onClick="makerspace()">
                 <input type="button" value="MAKERLAB" class="nav_button" onClick="">
                 <input type="button" value="BRUNSFIELD" class="nav_button" onClick="">
                 <input type="button" value="MTC" class="nav_button" onClick="">
@@ -53,11 +53,27 @@
                 
             </div>
         </div>
-
+        
+        <div>
+            <img id="default" src="images/standardmap.gif" style="position: absolute;z-index: -2;  transform: translate(20%, 0); height: 100%;z-index: -20;">
+            <img id="makerspace" src="images/makerspace.gif" style="position: absolute;z-index: -2;  transform: translate(20%, 0); height: 100%;z-index: -20;">
+            <script>document.getElementById("makerspace").style.display='none';</script>
+        </div>
     
     </body>
     
     <script>
+        
+        function makerspace(){
+            var element = document.getElementById("makerspace");
+            var element2 = document.getElementById("default");
+            var op = 0; 
+            var op2 = 1; 
+            element.style.display = 'block';
+            element.style.opacity=100;
+            element2.style.display = 'none';
+            element2.style.opacity=0;
+        }
         
         var newsScroll = document.getElementById("news");
         var xmlhttp = new XMLHttpRequest();
