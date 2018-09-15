@@ -27,12 +27,18 @@
             <div class="main-content">
                 <div class="sidebar">
                     <div class="widgets">
-                        <div class="weather"><i class="wi wi-na"></i></div>
-                        <div class="time"></div>
+                        <div class="languages">
+                            <button class="btn btn-inline language-switch fr" type="button" data-target="en">EN</button>
+                            <button class="btn btn-inline language-switch en" type="button" data-target="fr">FR</button>
+                        </div>
+                        <div class="status">
+                            <div class="weather"><i class="wi wi-na"></i></div>
+                            <div class="time"></div>
+                        </div>
                     </div>
                     <hr/>
                     <div class="main-navigation">
-                        <h1 class="header">CEED Spaces</h1>
+                        <h1 class="header"><span class="en">CEED Spaces</span><span class="fr">Espaces CEED</span></h1>
                         <nav class="navigation">
                             <button class="btn location-btn" type="button" data-target="makerspace">Makerspace</button>
                             <button class="btn location-btn" type="button" data-target="makerlab1">Makerlab 1</button>
@@ -43,11 +49,8 @@
                             <button class="btn location-btn" type="button" data-target="sndc"><span class="en">Simon Nehme Design Commons</span><span class="fr">Espace de conception Simon Nehme</span></button>
                         </nav>
                         <hr/>
-                        <h1 class="header">Resources</h1>
-                        <button class="btn btn-blue" type="button">OC Transpo Schedules</button>
-
-                        <button class="btn btn-inline language-switch fr" type="button" data-target="en">EN</button>
-                        <button class="btn btn-inline language-switch en" type="button" data-target="fr">FR</button>
+                        <h1 class="header"><span class="en">Resources</span><span class="fr">Ressources</span></h1>
+                        <button class="btn btn-blue" type="button"><span class="en">OC Transpo Schedules</span><span class="fr">Horaires OC Transpo</span></button>
                     </div>
                     <div class="ceed-space-info">
                         <h1 class="name"></h1>
@@ -112,7 +115,7 @@
                             <path class="directions" id="makerlab1-path" d="m-51.898 148.93h-12.371v19.148h109.61v64.728h11.906" style="fill:none;stroke-dasharray:2.38125, 2.38125;stroke-width:.79375;stroke:#c00"/>
                             <path class="directions" id="makerlab2-path" d="m-51.898 148.93h-12.371v19.148h109.61v121.61h11.906" style="fill:none;stroke-dasharray:2.38125, 2.38125;stroke-width:.79375;stroke:#c00"/>
                             <path class="directions" id="sndc-path" d="m-51.898 148.93h-12.371v-16.123h16.397" style="fill:none;stroke-dasharray:2.38125003, 2.38125003;stroke-width:.79375;stroke:#c00"/>
-                            <circle id="you-are-here-pulse" cx="-51.908" cy="148.89" r="2.6458" style="fill:#c00"/>
+                            <circle class="pulse" id="you-are-here-pulse" cx="-51.908" cy="148.89" r="2.6458" style="fill:#c00"/>
                             <circle id="you-are-here-circle" cx="-51.908" cy="148.89" r="2.6458" style="fill:#c00"/>
                             <text class="en" id="you-are-here-text-en" x="-51.769596" y="157.70688" style="fill:#cc0000;font-family:sans-serif;font-size:7.5697px;letter-spacing:0px;line-height:1.25;stroke-width:.18924;word-spacing:0px" xml:space="preserve"><tspan x="-51.769596" y="157.70688" dy="0" style="fill:#cc0000;font-family:'Roboto Condensed';line-height:0.5;stroke-width:.18924;text-align:center;text-anchor:middle">YOU</tspan><tspan x="-51.769596" y="167.16898" style="fill:#cc0000;font-family:'Roboto Condensed';line-height:0.5;stroke-width:.18924;text-align:center;text-anchor:middle"/></text>
                             <text class="text fr" id="mtc-text-fr" transform="rotate(-6.5237)" x="-212.72932" y="147.23143" style="fill:#cc0000;font-family:sans-serif;font-size:20.822px;letter-spacing:0px;line-height:1.25;stroke-width:.52056;word-spacing:0px" xml:space="preserve"><tspan x="-212.72932" y="147.23143" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.52056">CFF</tspan></text>

@@ -133,7 +133,7 @@ p {
     color: white;
 }
 
-.btn + .btn {
+.navigation .btn + .btn {
     margin-top: 10px;
 }
 
@@ -207,6 +207,13 @@ p {
 .widgets {
     color: white;
     text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.widgets .languages {
+
 }
 
 .widgets .weather {
