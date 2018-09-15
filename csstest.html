@@ -2,7 +2,8 @@
     <head>
         <title>STEM Directory</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed">
+        <link rel="stylesheet" href="assets/css/weather-icons.min.css">
         <link rel="stylesheet" href="csstest.css"/>
     </head>
     <body>
@@ -10,8 +11,12 @@
             <div id="news"></div>
             <div class="main-content">
                 <div class="sidebar">
+                    <div class="widgets">
+                        <div class="weather"><i class="wi wi-na"></i></div>
+                        <div class="time"></div>
+                    </div>
+                    <hr/>
                     <nav class="navigation">
-                        <hr/>
                         <button class="location-btn" type="button" data-target="makerspace">Makerspace</button>
                         <button class="location-btn" type="button" data-target="makerlab1">Makerlab 1</button>
                         <button class="location-btn" type="button" data-target="makerlab2">Makerlab 2</button>
@@ -19,8 +24,8 @@
                         <button class="location-btn" type="button" data-target="brunsfield">Brunsfield Centre</button>
                         <button class="location-btn" type="button" data-target="jmts">John McEntyre Team Space (JMTS)</button>
                         <button class="location-btn" type="button" data-target="sndc">Simon Nehme Design Commons</button>
-                        <hr/>
                     </nav>
+                    <hr/>
                 </div>
                 <div class="map-container">
                     <!-- copied directly from SVG, with classes added afterwards -->

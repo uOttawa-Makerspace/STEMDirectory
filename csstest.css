@@ -11,6 +11,7 @@ hr {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+    width: 100%;
 }
 
 .location-btn {
@@ -22,8 +23,11 @@ hr {
     text-transform: uppercase;
     color: white;
     font-size: 20px;
-    margin-bottom: 10px;
     font-family: 'Roboto', sans-serif;
+}
+
+.location-btn + .location-btn {
+    margin-top: 10px;
 }
 
 .container {
@@ -62,7 +66,30 @@ hr {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: start;
+}
+
+.widgets {
+    color: white;
+    text-align: right;
+}
+
+.widgets .weather {
+    font-size: 60px;
+    line-height: 1.5;
+}
+
+.wi {
+    line-height: 1.2;
+}
+
+.wi::before {
+    position: relative;
+    top: 10px;
+}
+
+.widgets .time {
+    font-size: 40px;
 }
 
 .map-container {
