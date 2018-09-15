@@ -6,32 +6,46 @@ $(document).ready(function () {
 
     var info = {
         "makerspace": {
-            "name": "Richard l'Abbé Makerspace",
-                "description": "Invent, build and play at the Richard L’Abbé Makerspace. It’s equipped with 3D printers, Arduinos, laser cutters and much more. A student-run space, it allows everyone to collaborate and build their dream projects for free!"
+            "name_en": "Richard l'Abbé Makerspace",
+            "name_fr": "Atelier Richard l'Abbé",
+            "description_en": "Invent, build and play at the Richard L’Abbé Makerspace. It’s equipped with 3D printers, Arduinos, laser cutters and much more. A student-run space, it allows everyone to collaborate and build their dream projects for free!",
+            "description_fr": "Si vous aimez inventer, construire et jouer, l’atelier Makerspace Richard-L’Abbé est fait pour vous. Vous y trouverez un équipement varié : imprimantes 3D, module Arduinos, découpeurs au laser, et bien d’autres instruments de pointe. Cet emplacement, géré par des étudiants, vous permet de concrétiser gratuitement et en collaboration vos projets rêvés!"
         },
         "makerlab1": {
-            "name": "Makerlab 1",
-                "description": "The uOttawa Makerlab offers a course-based laboratory setting focused on rapid prototyping technologies. University courses can include lab sessions at the Makerlab to give students a structured experience learning about many of the technologies available at the Richard L’Abbé Makerspace."
+            "name_en": "Makerlab",
+            "name_fr": "Makerlab",
+            "description_en": "The uOttawa Makerlab offers a course-based laboratory setting focused on rapid prototyping technologies. University courses can include lab sessions at the Makerlab to give students a structured experience learning about many of the technologies available at the Richard L’Abbé Makerspace.",
+            "description_fr": "Le Makerlab de l’Université d’Ottawa est un laboratoire axé sur les technologies à prototype rapide. Certains cours comportent des séances au Makerlab afin de procurer aux étudiants une expérience d’apprentissage structurée, au cours de laquelle ils utilisent un nombre de technologies offertes à l’Atelier Makerspace Richard-L’Abbé."
         },
         "makerlab2": {
-            "name": "Makerlab 2",
-                "description": "The uOttawa Makerlab offers a course-based laboratory setting focused on rapid prototyping technologies. University courses can include lab sessions at the Makerlab to give students a structured experience learning about many of the technologies available at the Richard L’Abbé Makerspace."
+            "name_en": "Makerlab",
+            "name_fr": "Makerlab",
+            "description_en": "The uOttawa Makerlab offers a course-based laboratory setting focused on rapid prototyping technologies. University courses can include lab sessions at the Makerlab to give students a structured experience learning about many of the technologies available at the Richard L’Abbé Makerspace.",
+            "description_fr": "Le Makerlab de l’Université d’Ottawa est un laboratoire axé sur les technologies à prototype rapide. Certains cours comportent des séances au Makerlab afin de procurer aux étudiants une expérience d’apprentissage structurée, au cours de laquelle ils utilisent un nombre de technologies offertes à l’Atelier Makerspace Richard-L’Abbé."
         },
         "mtc": {
-            "name": "Manufacturing Training Centre",
-                "description": "The Manufacturing Training Centre (MTC) provides training on a variety of traditional equipment, such as lathes, milling machines and saws, as well as on the latest processes, such as additive manufacturing. Students can register for free workshops throughout the year."
+            "name_en": "Manufacturing Training Centre",
+            "name_fr": "Centre de formation en fabrication",
+            "description_en": "The Manufacturing Training Centre (MTC) provides training on a variety of traditional equipment, such as lathes, milling machines and saws, as well as on the latest processes, such as additive manufacturing. Students can register for free workshops throughout the year.",
+            "description_fr": "Le Centre offre une formation sur de nombreux équipements traditionnels, tels que des tours, des fraiseuses et des scies, ainsi que sur des processus de pointe, comme la fabrication additive. Les étudiants peuvent s’inscrire gratuitement aux ateliers, toute l’année."
         },
         "brunsfield": {
-            "name": "Brunsfield Centre",
-                "description": "The Brunsfield Centre is a shared space open to Engineering undergraduate and graduate students, Faculty and Staff at the Faculty of Engineering. The Centre is also available to engineering students working on projects leading to start-ups, engaged in student competitions or entrepreneurial activities!"
+            "name_en": "Brunsfield Centre",
+            "name_fr": "Centre Brunsfield",
+            "description_en": "The Brunsfield Centre is a shared space open to Engineering undergraduate and graduate students, Faculty and Staff at the Faculty of Engineering. The Centre is also available to engineering students working on projects leading to start-ups, engaged in student competitions or entrepreneurial activities!",
+            "description_fr": "Le Centre Brunsfield est un espace partagé ouvert aux étudiants inscrits à un programme de génie du premier cycle ou des cycles supérieurs, aux membres du corps professoral et au personnel de la Faculté de génie. Le Centre est également mis à la disposition des étudiants en génie qui participent soit à des projets menant au démarrage d’entreprises, à des concours pour étudiants ou à des activités liées à l’entrepreneuriat!"
         },
         "jmts": {
-            "name": "John McEntyre Team Space",
-                "description": "The John McEntyre Team Space (JMTS) at the Faculty of Engineering is a collaborative space that provides precompetitive teams involved in large-scale projects with the space and infrastructure required to push technological and mechanical boundaries, promote the development of skills and expertise and strive for success."
+            "name_en": "John McEntyre Team Space",
+            "name_fr": "Espace de collaboration John McEntyre",
+            "description_en": "The John McEntyre Team Space (JMTS) at the Faculty of Engineering is a collaborative space that provides precompetitive teams involved in large-scale projects with the space and infrastructure required to push technological and mechanical boundaries, promote the development of skills and expertise and strive for success.",
+            "description_fr": "L’Espace de collaboration John McEntyre (ECJM) de la Faculté de génie est un espace de collaboration où les étudiants en génie participant à des concours de niveau préprofessionnels peuvent travailler sur des projets à grande échelle. Ces équipes représentent l’Université dans le cadre de divers concours internationaux."
         },
         "sndc": {
-            "name": "Simon Nehme Design Commons",
-                "description": "The Simon Nehme Design Commons is a collaborative space, covered with whiteboards, where student teams can pool talent, brainstorm and develop creative ideas."
+            "name_en": "Simon Nehme Design Commons",
+            "name_fr": "Espace de conception Simon Nehme",
+            "description_en": "The Simon Nehme Design Commons is a collaborative space, covered with whiteboards, where student teams can pool talent, brainstorm and develop creative ideas.",
+            "description_fr": "L’Espace de conception Simon-Nehme est un espace collaboratif, recouvert de tableaux blancs, où des groupes d'étudiants peuvent mettre en commun leurs talents, réfléchir et développer des idées créatives."
         }
     };
 
@@ -177,8 +191,10 @@ $(document).ready(function () {
         $('#' + targetName + '-bg').css('opacity', 1);
         $('#' + targetName + '-text, #' + targetName + '-text-en, #' + targetName + '-text-fr').css('opacity', 1);
 
-        $('.ceed-space-info .name').text(info[targetName]["name"]);
-        $('.ceed-space-info .description').text(info[targetName]["description"]);
+        $('.ceed-space-info .name.en').text(info[targetName]["name_en"]);
+        $('.ceed-space-info .name.fr').text(info[targetName]["name_fr"]);
+        $('.ceed-space-info .description.en').text(info[targetName]["description_en"]);
+        $('.ceed-space-info .description.fr').text(info[targetName]["description_fr"]);
         $('.ceed-space-info').css('display', 'block');
     });
 
@@ -206,10 +222,10 @@ $(document).ready(function () {
 
         if (target === "en") {
             $(".fr").css("display", "none");
-            $(".en").css("display", "initial");
+            $(".en").css("display", "block");
         } else if (target === "fr") {
             $(".en").css("display", "none");
-            $(".fr").css("display", "initial");
+            $(".fr").css("display", "block");
         }
     });
 

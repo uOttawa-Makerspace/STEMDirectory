@@ -1,227 +1,279 @@
-body, html { 
-    overflow-x: hidden; 
-    overflow-y: hidden;
+/** CSS Reset **/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu,
+nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-#videoPlayer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    z-index: 1;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
 }
 
-#vidOverlay{
-    position: fixed;
-    bottom: 50%;
-    background: rgba(223, 69, 38, 0.5);
-    color: #ffffff;
-    width: 100%;
-    padding: 20px;
-    font-family: 'Roboto', sans-serif;
-    z-index: 2;
+body {
+    line-height: 1.2;
 }
 
-body{
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html, body {
     width: 100%;
     height: 100%;
-    position: relative;
-}
-
-nav{
-    background: linear-gradient(-45deg, rgba(143, 0, 26, 1),rgba(34, 116, 165, 1));
-    width: 20%;
-    height: 100%;
-    border-radius: 2px;
-    position: absolute;
-    z-index: 0;
-    
-}
-
-map{
-    object-fit: cover;
-}
-
-
-#nav_widgets{
-    /*background-color: rgba(50, 50, 50, 0.2);*/
-    padding: 3%;
-    width: 90%;
-    height: 10%;
-    color: white;
-    font-size: 40px;
-    text-align: right;
+    padding: 0;
+    margin: 0;
+    background: #ddd;
     font-family: 'Roboto', sans-serif;
-    border-radius: 4px;
-}
-#time{
-    text-align: right;
-}
-#weather{
-    text-align: center;
 }
 
-hr{
+hr {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
-}
-
-
-.nav_button{
-    width: 95%;
-    height: 50px;
-    border-style: solid;
-    border-color: white;
-    border-width: 1px;
-    box-shadow: 1px;
-    background: rgba(0,0,0,0);
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    margin: 5px;
-    
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    text-decoration: none;
-    overflow: hidden;
-    
-    
-}
-.nav_button:after {
-    content: "";
-    background: #90EE90;
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px!important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 0.8s
-}
-
-.nav_button:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
-}
-
-.special_button{
-    width: 95%;
-    height: 80px;
-    border-style: solid;
-    border-color: deepskyblue;
-    border-width: 1px;
-    box-shadow: 1px;
-    background: rgba(0,0,0,0);
-    color: deepskyblue;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    margin: 5px;
-    
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    text-decoration: none;
-    overflow: hidden;
-}
-
-.marqueeBar{
     width: 100%;
-    background-color: rgba(0,0,0,0.5);
-    height: 30px;
-    position: absolute;
-    z-index: -1;
-    text-align: center;
-    
-}
-marquee{
-    padding-top: 5px;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: white;
-    z-index: -2;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    margin: 1em 0;
 }
 
-.bg{
+h1,h2,h3,h4,h5,h6 {
+    display: block;
+    margin-bottom: 1em;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+.overlay {
     position: fixed;
-    z-index: -2;
-    right: -300;
-    bottom: -300;
-    min-width: 100%; 
-    min-height: 100%;
-
-}
-
-.modal {
-    font-family: 'Roboto Condensed', sans-serif;
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
 }
 
-/* Modal Header */
-.modal-header {
-    padding: 2px 16px;
-    background-color: #5cb85c;
+.overlay .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.overlay .overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay .overlay-content .overlay-text {
+    font-size: 2em;
     color: white;
-}
-
-/* Modal Body */
-.modal-body {padding: 2px 16px;}
-
-/* Modal Footer */
-.modal-footer {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
-}
-
-/* Modal Content */
-.modal-content {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    animation-name: animatetop;
-    animation-duration: 0.4s
-}
-
-/* Add Animation */
-@keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
-}
-
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
     font-weight: bold;
+    background: rgba(204, 0, 0, 0.33);
+    padding: 1.5em;
 }
 
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+.overlay .overlay-content .overlay-text p {
+    margin: 0;
 }
 
-html{
-    background-color: #D9D9D9;
+.overlay .overlay-content .overlay-text p + p {
+    margin-top: 0.5em;
 }
 
-/*html { cursor: none; }*/
+.btn {
+    display: block;
+    background: none;
+    border: 1px solid white;
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.navigation .btn + .btn {
+    margin-top: 10px;
+}
+
+.btn-blue {
+    color: #00BFFF;
+    border-color: #00BFFF;
+}
+
+.btn-inline {
+    width: auto;
+    display: inline-block;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    flex: 1;
+}
+
+#news {
+    background: #777;
+    padding: 5px;
+    color: white;
+    overflow: hidden;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+#news .item:first-child::before {
+    content: "\2605";
+    margin: 0 10px;
+}
+
+#news .item::after {
+    content: "\2605";
+    margin: 0 10px;
+}
+
+.sidebar {
+    background: linear-gradient(-45deg, rgba(143, 0, 26, 1),rgba(34, 116, 165, 1));
+    width: 350px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.sidebar .header {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+.ceed-space-info {
+    display: none;
+}
+
+.ceed-space-info .name {
+    font-size: 20px;
+}
+
+.widgets {
+    color: white;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.widgets .languages {
+
+}
+
+.widgets .weather {
+    font-size: 60px;
+    line-height: 1.5;
+}
+
+.widgets .time {
+    font-size: 40px;
+    margin-top: 0.2em;
+}
+
+.map-container {
+    flex: 1;
+    margin: 20px;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.map .text {
+    opacity: 1;
+    transition: 500ms linear opacity;
+}
+
+.map .directions {
+    animation: dash .5s linear infinite;
+    stroke-dasharray: 3 !important;
+    opacity: 0;
+    transition: 500ms linear opacity;
+}
+
+.map .bg {
+    opacity: 0;
+    transition: 500ms linear opacity;
+}
+
+.map circle.pulse {
+    transform-origin: -51.908px 148.89px;
+    animation: pulse 1.5s linear infinite;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: -6;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
