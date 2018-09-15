@@ -1,3 +1,5 @@
+"use strict";
+
 $(document).ready(function () {
     // navigation buttons
     $('.location-btn').on('click', function () {
@@ -13,10 +15,10 @@ $(document).ready(function () {
     // news marquee
     $.get('assets/data/news.json').done(function (data) {
         var $news = $('#news');
-        var star = "\240\240\240\240\240\u2605\240\240\240\240\240";
-        var news = data["news"].join(star);
 
-        $news.append(star + news + star);
-        $news.marquee({duration: 15000});
+        for (var i = 0; i < data["news"].length; i++)
+            $news.append('<span class="item">' + data["news"][i] + '</span>');
+
+        $news.marquee({duration: 20000});
     });
 });
