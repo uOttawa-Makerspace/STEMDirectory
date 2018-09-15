@@ -2,6 +2,8 @@
 
 $(document).ready(function () {
     var config = {};
+    var timer = null;
+
     var info = {
         "makerspace": {
             "name": "Richard l'Abbé Makerspace",
@@ -156,6 +158,14 @@ $(document).ready(function () {
         $(".overlay").fadeIn(1000);
     }
 
+    function backToMainNavigation() {
+        $('.ceed-space-info').css('display', 'none');
+        $('.directions, .bg').css('opacity', 0);
+
+        $('.main-navigation').css('display', 'block');
+        $('.text').css('opacity', 1);
+    }
+
     // navigation buttons
     $('.location-btn').on('click', function () {
         var targetName = $(this).data('target');
@@ -165,7 +175,7 @@ $(document).ready(function () {
 
         $('#' + targetName + '-path').css('opacity', 1);
         $('#' + targetName + '-bg').css('opacity', 1);
-        $('#' + targetName + '-text').css('opacity', 1);
+        $('#' + targetName + '-text, #' + targetName + '-text-en, #' + targetName + '-text-fr').css('opacity', 1);
 
         $('.ceed-space-info .name').text(info[targetName]["name"]);
         $('.ceed-space-info .description').text(info[targetName]["description"]);
@@ -173,11 +183,7 @@ $(document).ready(function () {
     });
 
     $('.sidebar .back-btn').on('click', function () {
-        $('.ceed-space-info').css('display', 'none');
-        $('.directions, .bg').css('opacity', 0);
-
-        $('.main-navigation').css('display', 'block');
-        $('.text').css('opacity', 1);
+        backToMainNavigation();
     });
 
     // news marquee
@@ -190,11 +196,24 @@ $(document).ready(function () {
         $news.marquee({duration: 20000});
     });
 
-    var timer = null;
-
     $(".overlay").on("click", function () {
+        backToMainNavigation();
         $(".overlay").fadeOut(1000);
     });
+
+    $(".language-switch").on("click", function () {
+        var target = $(this).data("target");
+
+        if (target === "en") {
+            $(".fr").css("display", "none");
+            $(".en").css("display", "initial");
+        } else if (target === "fr") {
+            $(".en").css("display", "none");
+            $(".fr").css("display", "initial");
+        }
+    });
+
+    $(".fr").css("display", "none");
 
     $(document).on("click", function () {
         console.log("click");

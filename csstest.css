@@ -142,6 +142,11 @@ p {
     border-color: #00BFFF;
 }
 
+.btn-inline {
+    width: auto;
+    display: inline-block;
+}
+
 .container {
     display: flex;
     flex-direction: column;
