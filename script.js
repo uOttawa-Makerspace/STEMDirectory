@@ -2,6 +2,36 @@
 
 $(document).ready(function () {
     var config = {};
+    var info = {
+        "makerspace": {
+            "name": "Richard l'Abbé Makerspace",
+                "description": "Invent, build and play at the Richard L’Abbé Makerspace. It’s equipped with 3D printers, Arduinos, laser cutters and much more. A student-run space, it allows everyone to collaborate and build their dream projects for free!"
+        },
+        "makerlab1": {
+            "name": "Makerlab 1",
+                "description": "The uOttawa Makerlab offers a course-based laboratory setting focused on rapid prototyping technologies. University courses can include lab sessions at the Makerlab to give students a structured experience learning about many of the technologies available at the Richard L’Abbé Makerspace."
+        },
+        "makerlab2": {
+            "name": "Makerlab 2",
+                "description": "The uOttawa Makerlab offers a course-based laboratory setting focused on rapid prototyping technologies. University courses can include lab sessions at the Makerlab to give students a structured experience learning about many of the technologies available at the Richard L’Abbé Makerspace."
+        },
+        "mtc": {
+            "name": "Manufacturing Training Centre",
+                "description": "The Manufacturing Training Centre (MTC) provides training on a variety of traditional equipment, such as lathes, milling machines and saws, as well as on the latest processes, such as additive manufacturing. Students can register for free workshops throughout the year."
+        },
+        "brunsfield": {
+            "name": "Brunsfield Centre",
+                "description": "The Brunsfield Centre is a shared space open to Engineering undergraduate and graduate students, Faculty and Staff at the Faculty of Engineering. The Centre is also available to engineering students working on projects leading to start-ups, engaged in student competitions or entrepreneurial activities!"
+        },
+        "jmts": {
+            "name": "John McEntyre Team Space",
+                "description": "The John McEntyre Team Space (JMTS) at the Faculty of Engineering is a collaborative space that provides precompetitive teams involved in large-scale projects with the space and infrastructure required to push technological and mechanical boundaries, promote the development of skills and expertise and strive for success."
+        },
+        "sndc": {
+            "name": "Simon Nehme Design Commons",
+                "description": "The Simon Nehme Design Commons is a collaborative space, covered with whiteboards, where student teams can pool talent, brainstorm and develop creative ideas."
+        }
+    };
 
     // weather
     function getWeather() {
@@ -122,28 +152,32 @@ $(document).ready(function () {
         setTimeout(setTime, 1000);
     }
 
+    function showOverlay() {
+        $(".overlay").fadeIn(1000);
+    }
+
     // navigation buttons
     $('.location-btn').on('click', function () {
         var targetName = $(this).data('target');
 
-        $('.directions, .bg, .text').css('display', 'none');
+        $('.directions, .bg, .text').css('opacity', 0);
         $('.main-navigation').css('display', 'none');
 
-        $('#' + targetName + '-path').css('display', 'block');
-        $('#' + targetName + '-bg').css('display', 'block');
-        $('#' + targetName + '-text').css('display', 'block');
+        $('#' + targetName + '-path').css('opacity', 1);
+        $('#' + targetName + '-bg').css('opacity', 1);
+        $('#' + targetName + '-text').css('opacity', 1);
 
-        $('.ceed-space-info .name').text(config["info"][targetName]["name"]);
-        $('.ceed-space-info .description').text(config["info"][targetName]["description"]);
+        $('.ceed-space-info .name').text(info[targetName]["name"]);
+        $('.ceed-space-info .description').text(info[targetName]["description"]);
         $('.ceed-space-info').css('display', 'block');
     });
 
     $('.sidebar .back-btn').on('click', function () {
         $('.ceed-space-info').css('display', 'none');
-        $('.directions, .bg').css('display', 'none');
+        $('.directions, .bg').css('opacity', 0);
 
         $('.main-navigation').css('display', 'block');
-        $('.text').css('display', 'block');
+        $('.text').css('opacity', 1);
     });
 
     // news marquee
@@ -154,6 +188,23 @@ $(document).ready(function () {
             $news.append('<span class="item">' + data["news"][i] + '</span>');
 
         $news.marquee({duration: 20000});
+    });
+
+    var timer = null;
+
+    $(".overlay").on("click", function () {
+        $(".overlay").fadeOut(1000);
+    });
+
+    $(document).on("click", function () {
+        console.log("click");
+
+        if (timer !== null)
+            clearTimeout(timer);
+
+        timer = setTimeout(showOverlay, 30 * 1000); // 30s
+
+        return false;
     });
 
     $.get('config.json').done(function (data) {
