@@ -1,3 +1,4 @@
+<!--suppress CssNoGenericFontName, CssRedundantUnit -->
 <html>
     <head>
         <title>STEM Directory</title>
@@ -16,16 +17,26 @@
                         <div class="time"></div>
                     </div>
                     <hr/>
-                    <nav class="navigation">
-                        <button class="location-btn" type="button" data-target="makerspace">Makerspace</button>
-                        <button class="location-btn" type="button" data-target="makerlab1">Makerlab 1</button>
-                        <button class="location-btn" type="button" data-target="makerlab2">Makerlab 2</button>
-                        <button class="location-btn" type="button" data-target="mtc">Manufacturing Training Centre (MTC)</button>
-                        <button class="location-btn" type="button" data-target="brunsfield">Brunsfield Centre</button>
-                        <button class="location-btn" type="button" data-target="jmts">John McEntyre Team Space (JMTS)</button>
-                        <button class="location-btn" type="button" data-target="sndc">Simon Nehme Design Commons</button>
-                    </nav>
-                    <hr/>
+                    <div class="main-navigation">
+                        <h1 class="header">CEED Spaces</h1>
+                        <nav class="navigation">
+                            <button class="btn location-btn" type="button" data-target="makerspace">Makerspace</button>
+                            <button class="btn location-btn" type="button" data-target="makerlab1">Makerlab 1</button>
+                            <button class="btn location-btn" type="button" data-target="makerlab2">Makerlab 2</button>
+                            <button class="btn location-btn" type="button" data-target="mtc">Manufacturing Training Centre</button>
+                            <button class="btn location-btn" type="button" data-target="brunsfield">Brunsfield Centre</button>
+                            <button class="btn location-btn" type="button" data-target="jmts">John McEntyre Team Space</button>
+                            <button class="btn location-btn" type="button" data-target="sndc">Simon Nehme Design Commons</button>
+                        </nav>
+                        <hr/>
+                        <h1 class="header">Resources</h1>
+                        <button class="btn btn-blue" type="button">OC Transpo Schedules</button>
+                    </div>
+                    <div class="ceed-space-info">
+                        <h1 class="name"></h1>
+                        <p class="description"></p>
+                        <button class="btn back-btn" type="button">Back</button>
+                    </div>
                 </div>
                 <div class="map-container">
                     <!-- copied directly from SVG, with classes added afterwards -->
@@ -78,6 +89,7 @@
                             <path class="directions" id="makerspace-path" d="m-51.898 148.93h-12.371v19.148h96.951v-28.065" style="fill:none;stroke-dasharray:2.38125, 2.38125;stroke-width:.79375;stroke:#c00"/>
                             <path class="directions" id="makerlab1-path" d="m-51.898 148.93h-12.371v19.148h109.61v64.728h11.906" style="fill:none;stroke-dasharray:2.38125, 2.38125;stroke-width:.79375;stroke:#c00"/>
                             <path class="directions" id="makerlab2-path" d="m-51.898 148.93h-12.371v19.148h109.61v121.61h11.906" style="fill:none;stroke-dasharray:2.38125, 2.38125;stroke-width:.79375;stroke:#c00"/>
+                            <path class="directions" id="sndc-path" d="m-51.898 148.93h-12.371v-16.123h16.397" style="fill:none;stroke-dasharray:2.38125003, 2.38125003;stroke-width:.79375;stroke:#c00"/>
                             <text class="text" id="makerspace-text" transform="rotate(-31.602)" x="-90.163948" y="115.28221" style="fill:#cc0000;font-family:sans-serif;font-size:13.398px;letter-spacing:0px;line-height:1.25;stroke-width:.33495;word-spacing:0px" xml:space="preserve"><tspan x="-90.163948" y="115.28221" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.33495">MAKERSPACE</tspan></text>
                             <text class="text" id="jmts-text" transform="rotate(7.473)" x="-98.429993" y="237.48346" style="fill:#cc0000;font-family:sans-serif;font-size:19.487px;letter-spacing:0px;line-height:1.25;stroke-width:.48718;word-spacing:0px" xml:space="preserve"><tspan x="-98.429993" y="237.48346" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.48718">JMTS</tspan></text>
                             <text class="text" id="mtc-text" transform="rotate(-6.5237)" x="-215.94389" y="147.39645" style="fill:#cc0000;font-family:sans-serif;font-size:20.822px;letter-spacing:0px;line-height:1.25;stroke-width:.52056;word-spacing:0px" xml:space="preserve"><tspan x="-215.94389" y="147.39645" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.52056">MTC</tspan></text>
@@ -85,7 +97,6 @@
                             <text class="text" id="makerlab1-text" transform="rotate(84.718)" x="207.46466" y="-37.232635" style="fill:#cc0000;font-family:sans-serif;font-size:16.666px;letter-spacing:0px;line-height:1.25;stroke-width:.41664;word-spacing:0px" xml:space="preserve"><tspan x="207.46466" y="-37.232635" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.41664">MAKERLAB</tspan></text>
                             <text class="text" id="makerlab2-text" transform="rotate(84.718)" x="207.46466" y="-37.232635" style="fill:#cc0000;font-family:sans-serif;font-size:16.666px;letter-spacing:0px;line-height:1.25;stroke-width:.41664;word-spacing:0px" xml:space="preserve"><tspan x="207.46466" y="-37.232635" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.41664">MAKERLAB</tspan></text>
                             <text class="text" id="sndc-text" transform="rotate(66.936)" x="89.897606" y="77.444839" style="fill:#cc0000;font-family:sans-serif;font-size:6.8546px;letter-spacing:0px;line-height:1.25;stroke-width:.17136;word-spacing:0px" xml:space="preserve"><tspan x="89.897606" y="77.444839" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.17136;text-align:center;text-anchor:middle">DESIGN</tspan><tspan x="89.897606" y="86.268959" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.17136;text-align:center;text-anchor:middle">COMMONS</tspan></text>
-                            <path class="directions" id="sndc-path" d="m-51.898 148.93h-12.371v-16.123h16.397" style="fill:none;stroke-dasharray:2.38125003, 2.38125003;stroke-width:.79375;stroke:#c00"/>
                         </g>
                     </svg>
                 </div>

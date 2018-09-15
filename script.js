@@ -127,10 +127,23 @@ $(document).ready(function () {
         var targetName = $(this).data('target');
 
         $('.directions, .bg, .text').css('display', 'none');
+        $('.main-navigation').css('display', 'none');
 
         $('#' + targetName + '-path').css('display', 'block');
         $('#' + targetName + '-bg').css('display', 'block');
         $('#' + targetName + '-text').css('display', 'block');
+
+        $('.ceed-space-info .name').text(config["info"][targetName]["name"]);
+        $('.ceed-space-info .description').text(config["info"][targetName]["description"]);
+        $('.ceed-space-info').css('display', 'block');
+    });
+
+    $('.sidebar .back-btn').on('click', function () {
+        $('.ceed-space-info').css('display', 'none');
+        $('.directions, .bg').css('display', 'none');
+
+        $('.main-navigation').css('display', 'block');
+        $('.text').css('display', 'block');
     });
 
     // news marquee
