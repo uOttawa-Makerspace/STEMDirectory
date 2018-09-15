@@ -28,9 +28,21 @@ hr {
 
 .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     height: 100%;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+}
+
+#news {
+    background: #777;
+    padding: 5px;
+    color: white;
+    overflow: hidden;
 }
 
 .sidebar {

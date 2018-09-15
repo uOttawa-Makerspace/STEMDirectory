@@ -1,87 +1,93 @@
 <html>
     <head>
+        <title>STEM Directory</title>
+
         <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
         <link rel="stylesheet" href="csstest.css"/>
     </head>
     <body>
         <div class="container">
-            <div class="sidebar">
-                <nav class="navigation">
-                    <hr/>
-                    <button class="location-btn" type="button" data-target="makerspace">Makerspace</button>
-                    <button class="location-btn" type="button" data-target="makerlab1">Makerlab 1</button>
-                    <button class="location-btn" type="button" data-target="makerlab2">Makerlab 2</button>
-                    <button class="location-btn" type="button" data-target="mtc">Manufacturing Training Centre (MTC)</button>
-                    <button class="location-btn" type="button" data-target="brunsfield">Brunsfield Centre</button>
-                    <button class="location-btn" type="button" data-target="jmts">John McEntyre Team Space (JMTS)</button>
-                    <button class="location-btn" type="button" data-target="sndc">Simon Nehme Design Commons</button>
-                    <hr/>
-                </nav>
-            </div>
-            <div class="map-container">
-                <!-- copied directly from SVG, with classes added afterwards -->
-                <svg class="map" width="1086.8" height="771.66" version="1.1" viewBox="0 0 287.56 204.17" xmlns="http://www.w3.org/2000/svg">
-                    <g transform="translate(207.9 -92.709)">
-                        <path class="bg" id="sndc-bg" d="m-51.993 93.654 0.0945 41.861h26.08l0.31586-41.483z" style="fill-opacity:.29412;fill:#c00"/>
-                        <path class="bg" id="makerlab1-bg" d="m77.559 186.59h-26.789v40.632h3.449v10.442h-3.6853l-3e-6 57.925 27.799-0.0347z" style="fill-opacity:.29412;fill:#c00"/>
-                        <path class="bg" id="makerlab2-bg" d="m77.559 186.59h-26.789v40.632h3.449v10.442h-3.6853l-3e-6 57.925 27.799-0.0347z" style="fill-opacity:.29412;fill:#c00"/>
-                        <path class="bg" id="makerspace-bg" d="m-25.502 94.032v54.924l77.075-0.0227-6e-6 -54.807-77.075-0.09464" style="fill-opacity:.29412;fill:#c00"/>
-                        <path class="bg" id="brunsfield-bg" d="m-152.86 234.35h-53.988l0.26727 61.205 53.721-0.26727z" style="fill-opacity:.29412;fill:#c00"/>
-                        <path class="bg" id="jmts-bg" d="m-136.66 186.35 0.0472 42.617h5.1027v31.656h-5.0082v20.127h29.624v-20.145h31.279l-0.04843-74.255h-60.996" style="fill-opacity:.29412;fill:#c00"/>
-                        <path class="bg" id="mtc-bg" d="m-206.49 138.07-0.37798 46.964h54.24l-0.0945-46.964z" style="fill-opacity:.29412;fill:#c00"/>
-                        <path d="m78.332 94.032v201.52h-284.91v-201.52z" style="fill:none;stroke-width:2.6458;stroke:#000"/>
-                        <path d="m-51.993 93.654v37.42" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path transform="matrix(.26458 0 0 .26458 -211.12 71.788)" d="m943.48 291.57h49.375v-207.14" style="fill:none;stroke-width:5;stroke:#000"/>
-                        <path transform="matrix(.26458 0 0 .26458 -211.12 71.788)" d="m792.5 291.57h108.05" style="fill:none;stroke-width:5;stroke:#000"/>
-                        <path d="m51.573 148.93v1.3423h1.6064m9.1659 0h16.188" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-25.502 148.96v-54.924" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-12.396 148.93h-39.502v-13.418h26.08" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m77.559 186.59h-26.789v40.632h3.449v3.7798m0 4.2522v2.4096h-3.6853v49.184" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-53.599 186.35h3.7756m23.119 0h2.8063m22.451 0h3.2741m22.918 0-0.0082-0.8977h14.93v1.1339m0 4.0632v14.788m0 4.4412v52.113h-2.3623v18.615h-28.348v-7.3705m-4.4412 0h-5.1972v7.3705h-51.169v-5.4807l-23.813-0.15652v5.8897m-5.1972-0.11075h-21.261m-4.7719 0h-29.624v-20.127h5.0082v-1.0394m0-4.2522v-26.364h-5.1027v-57.263m0-8.1265v-14.41h60.949v1.2757m0 4.658v10.981m0 6.0476v4.016m0 6.1894v4.016h14.977" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-51.851 275.13v-88.89" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-206.84 234.35h53.988v18.308m0 7.6172v35.012" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-75.663 186.35v88.621" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-75.663 186.35h-60.996" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-91.113 186.26v-37.042" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-75.616 160.27h-15.592" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m24.745 186.35v75.658l12.56-0.0156" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-206.68 227.84h28.159v-42.617" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-163.61 226.98h-9.3788v-12.568h20.269v12.568h-5.0102" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-152.72 214.42v-66.335m0-7.7485v-2.2678h-53.767" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-206.87 185.03h17.998m6.949 0h6.0136m5.8799 0h17.399" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-177.86 138.16v-4.573m0-3.2072v-1.8582h15.381m4.2763 0h4.5467v-34.691" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-153.65 128.52h17.503v-34.357" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-136.29 126.97h2.0045m3.675 0h54.723v-33.008" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m8.9561 273.24v-3.26m0-4.3467v-12.568m0-3.7798v-5.8586m0-9.1122v-6.3849h15.45" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m24.812 238.82h-16.437" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m24.745 248.65h-15.836" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m24.745 262.01v3.3409h-15.635" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-106.89 280.75v-20.145h31.279" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-91.317 280.85v-20.246" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m50.533 292.8v2.7876" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m8.9561 227.93h-2.9293m-4.0632 0h-2.9766" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <path d="m-4.7455 227.93h-39.971m-3.1656 0h-3.827" style="fill:none;stroke-width:1.3229;stroke:#000"/>
-                        <circle id="you-are-here-circle" cx="-51.908" cy="148.89" r="2.6458" style="fill:#c00"/>
-                        <path class="directions" id="mtc-path" d="m-51.898 148.93h-12.371v-11.846h-79.564v7.2619h-13.796" style="fill:none;stroke-dasharray:2.38125, 2.38125;stroke-width:.79375;stroke:#c00"/>
-                        <path class="directions" id="brunsfield-path" d="m-51.898 148.93h-12.371v-11.846h-79.564v119.24h-13.702" style="fill:none;stroke-dasharray:2.38125003, 2.38125003;stroke-width:.79375;stroke:#c00"/>
-                        <path class="directions" id="jmts-path" d="m-51.898 148.93h-12.371v-11.846h-79.564v120.94h15.592" style="fill:none;stroke-dasharray:2.38125003, 2.38125003;stroke-width:.79375;stroke:#c00"/>
-                        <path class="directions" id="makerspace-path" d="m-51.898 148.93h-12.371v19.148h96.951v-28.065" style="fill:none;stroke-dasharray:2.38125, 2.38125;stroke-width:.79375;stroke:#c00"/>
-                        <path class="directions" id="makerlab1-path" d="m-51.898 148.93h-12.371v19.148h109.61v64.728h11.906" style="fill:none;stroke-dasharray:2.38125, 2.38125;stroke-width:.79375;stroke:#c00"/>
-                        <path class="directions" id="makerlab2-path" d="m-51.898 148.93h-12.371v19.148h109.61v121.61h11.906" style="fill:none;stroke-dasharray:2.38125, 2.38125;stroke-width:.79375;stroke:#c00"/>
-                        <text class="text" id="makerspace-text" transform="rotate(-31.602)" x="-90.163948" y="115.28221" style="fill:#cc0000;font-family:sans-serif;font-size:13.398px;letter-spacing:0px;line-height:1.25;stroke-width:.33495;word-spacing:0px" xml:space="preserve"><tspan x="-90.163948" y="115.28221" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.33495">MAKERSPACE</tspan></text>
-                        <text class="text" id="jmts-text" transform="rotate(7.473)" x="-98.429993" y="237.48346" style="fill:#cc0000;font-family:sans-serif;font-size:19.487px;letter-spacing:0px;line-height:1.25;stroke-width:.48718;word-spacing:0px" xml:space="preserve"><tspan x="-98.429993" y="237.48346" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.48718">JMTS</tspan></text>
-                        <text class="text" id="mtc-text" transform="rotate(-6.5237)" x="-215.94389" y="147.39645" style="fill:#cc0000;font-family:sans-serif;font-size:20.822px;letter-spacing:0px;line-height:1.25;stroke-width:.52056;word-spacing:0px" xml:space="preserve"><tspan x="-215.94389" y="147.39645" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.52056">MTC</tspan></text>
-                        <text class="text" id="brunsfield-text" transform="rotate(-55.273)" x="-351.36505" y="7.9957151" style="fill:#cc0000;font-family:sans-serif;font-size:12.471px;letter-spacing:0px;line-height:1.25;stroke-width:.31178;word-spacing:0px" xml:space="preserve"><tspan x="-351.36505" y="7.9957151" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.31178">BRUNSFIELD</tspan></text>
-                        <text class="text" id="makerlab1-text" transform="rotate(84.718)" x="207.46466" y="-37.232635" style="fill:#cc0000;font-family:sans-serif;font-size:16.666px;letter-spacing:0px;line-height:1.25;stroke-width:.41664;word-spacing:0px" xml:space="preserve"><tspan x="207.46466" y="-37.232635" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.41664">MAKERLAB</tspan></text>
-                        <text class="text" id="makerlab2-text" transform="rotate(84.718)" x="207.46466" y="-37.232635" style="fill:#cc0000;font-family:sans-serif;font-size:16.666px;letter-spacing:0px;line-height:1.25;stroke-width:.41664;word-spacing:0px" xml:space="preserve"><tspan x="207.46466" y="-37.232635" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.41664">MAKERLAB</tspan></text>
-                        <text class="text" id="sndc-text" transform="rotate(66.936)" x="89.897606" y="77.444839" style="fill:#cc0000;font-family:sans-serif;font-size:6.8546px;letter-spacing:0px;line-height:1.25;stroke-width:.17136;word-spacing:0px" xml:space="preserve"><tspan x="89.897606" y="77.444839" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.17136;text-align:center;text-anchor:middle">DESIGN</tspan><tspan x="89.897606" y="86.268959" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.17136;text-align:center;text-anchor:middle">COMMONS</tspan></text>
-                        <path class="directions" id="sndc-path" d="m-51.898 148.93h-12.371v-16.123h16.397" style="fill:none;stroke-dasharray:2.38125003, 2.38125003;stroke-width:.79375;stroke:#c00"/>
-                    </g>
-                </svg>
+            <div id="news"></div>
+            <div class="main-content">
+                <div class="sidebar">
+                    <nav class="navigation">
+                        <hr/>
+                        <button class="location-btn" type="button" data-target="makerspace">Makerspace</button>
+                        <button class="location-btn" type="button" data-target="makerlab1">Makerlab 1</button>
+                        <button class="location-btn" type="button" data-target="makerlab2">Makerlab 2</button>
+                        <button class="location-btn" type="button" data-target="mtc">Manufacturing Training Centre (MTC)</button>
+                        <button class="location-btn" type="button" data-target="brunsfield">Brunsfield Centre</button>
+                        <button class="location-btn" type="button" data-target="jmts">John McEntyre Team Space (JMTS)</button>
+                        <button class="location-btn" type="button" data-target="sndc">Simon Nehme Design Commons</button>
+                        <hr/>
+                    </nav>
+                </div>
+                <div class="map-container">
+                    <!-- copied directly from SVG, with classes added afterwards -->
+                    <svg class="map" width="1086.8" height="771.66" version="1.1" viewBox="0 0 287.56 204.17" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(207.9 -92.709)">
+                            <path class="bg" id="sndc-bg" d="m-51.993 93.654 0.0945 41.861h26.08l0.31586-41.483z" style="fill-opacity:.29412;fill:#c00"/>
+                            <path class="bg" id="makerlab1-bg" d="m77.559 186.59h-26.789v40.632h3.449v10.442h-3.6853l-3e-6 57.925 27.799-0.0347z" style="fill-opacity:.29412;fill:#c00"/>
+                            <path class="bg" id="makerlab2-bg" d="m77.559 186.59h-26.789v40.632h3.449v10.442h-3.6853l-3e-6 57.925 27.799-0.0347z" style="fill-opacity:.29412;fill:#c00"/>
+                            <path class="bg" id="makerspace-bg" d="m-25.502 94.032v54.924l77.075-0.0227-6e-6 -54.807-77.075-0.09464" style="fill-opacity:.29412;fill:#c00"/>
+                            <path class="bg" id="brunsfield-bg" d="m-152.86 234.35h-53.988l0.26727 61.205 53.721-0.26727z" style="fill-opacity:.29412;fill:#c00"/>
+                            <path class="bg" id="jmts-bg" d="m-136.66 186.35 0.0472 42.617h5.1027v31.656h-5.0082v20.127h29.624v-20.145h31.279l-0.04843-74.255h-60.996" style="fill-opacity:.29412;fill:#c00"/>
+                            <path class="bg" id="mtc-bg" d="m-206.49 138.07-0.37798 46.964h54.24l-0.0945-46.964z" style="fill-opacity:.29412;fill:#c00"/>
+                            <path d="m78.332 94.032v201.52h-284.91v-201.52z" style="fill:none;stroke-width:2.6458;stroke:#000"/>
+                            <path d="m-51.993 93.654v37.42" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path transform="matrix(.26458 0 0 .26458 -211.12 71.788)" d="m943.48 291.57h49.375v-207.14" style="fill:none;stroke-width:5;stroke:#000"/>
+                            <path transform="matrix(.26458 0 0 .26458 -211.12 71.788)" d="m792.5 291.57h108.05" style="fill:none;stroke-width:5;stroke:#000"/>
+                            <path d="m51.573 148.93v1.3423h1.6064m9.1659 0h16.188" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-25.502 148.96v-54.924" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-12.396 148.93h-39.502v-13.418h26.08" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m77.559 186.59h-26.789v40.632h3.449v3.7798m0 4.2522v2.4096h-3.6853v49.184" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-53.599 186.35h3.7756m23.119 0h2.8063m22.451 0h3.2741m22.918 0-0.0082-0.8977h14.93v1.1339m0 4.0632v14.788m0 4.4412v52.113h-2.3623v18.615h-28.348v-7.3705m-4.4412 0h-5.1972v7.3705h-51.169v-5.4807l-23.813-0.15652v5.8897m-5.1972-0.11075h-21.261m-4.7719 0h-29.624v-20.127h5.0082v-1.0394m0-4.2522v-26.364h-5.1027v-57.263m0-8.1265v-14.41h60.949v1.2757m0 4.658v10.981m0 6.0476v4.016m0 6.1894v4.016h14.977" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-51.851 275.13v-88.89" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-206.84 234.35h53.988v18.308m0 7.6172v35.012" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-75.663 186.35v88.621" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-75.663 186.35h-60.996" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-91.113 186.26v-37.042" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-75.616 160.27h-15.592" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m24.745 186.35v75.658l12.56-0.0156" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-206.68 227.84h28.159v-42.617" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-163.61 226.98h-9.3788v-12.568h20.269v12.568h-5.0102" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-152.72 214.42v-66.335m0-7.7485v-2.2678h-53.767" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-206.87 185.03h17.998m6.949 0h6.0136m5.8799 0h17.399" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-177.86 138.16v-4.573m0-3.2072v-1.8582h15.381m4.2763 0h4.5467v-34.691" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-153.65 128.52h17.503v-34.357" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-136.29 126.97h2.0045m3.675 0h54.723v-33.008" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m8.9561 273.24v-3.26m0-4.3467v-12.568m0-3.7798v-5.8586m0-9.1122v-6.3849h15.45" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m24.812 238.82h-16.437" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m24.745 248.65h-15.836" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m24.745 262.01v3.3409h-15.635" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-106.89 280.75v-20.145h31.279" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-91.317 280.85v-20.246" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m50.533 292.8v2.7876" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m8.9561 227.93h-2.9293m-4.0632 0h-2.9766" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <path d="m-4.7455 227.93h-39.971m-3.1656 0h-3.827" style="fill:none;stroke-width:1.3229;stroke:#000"/>
+                            <circle id="you-are-here-circle" cx="-51.908" cy="148.89" r="2.6458" style="fill:#c00"/>
+                            <path class="directions" id="mtc-path" d="m-51.898 148.93h-12.371v-11.846h-79.564v7.2619h-13.796" style="fill:none;stroke-dasharray:2.38125, 2.38125;stroke-width:.79375;stroke:#c00"/>
+                            <path class="directions" id="brunsfield-path" d="m-51.898 148.93h-12.371v-11.846h-79.564v119.24h-13.702" style="fill:none;stroke-dasharray:2.38125003, 2.38125003;stroke-width:.79375;stroke:#c00"/>
+                            <path class="directions" id="jmts-path" d="m-51.898 148.93h-12.371v-11.846h-79.564v120.94h15.592" style="fill:none;stroke-dasharray:2.38125003, 2.38125003;stroke-width:.79375;stroke:#c00"/>
+                            <path class="directions" id="makerspace-path" d="m-51.898 148.93h-12.371v19.148h96.951v-28.065" style="fill:none;stroke-dasharray:2.38125, 2.38125;stroke-width:.79375;stroke:#c00"/>
+                            <path class="directions" id="makerlab1-path" d="m-51.898 148.93h-12.371v19.148h109.61v64.728h11.906" style="fill:none;stroke-dasharray:2.38125, 2.38125;stroke-width:.79375;stroke:#c00"/>
+                            <path class="directions" id="makerlab2-path" d="m-51.898 148.93h-12.371v19.148h109.61v121.61h11.906" style="fill:none;stroke-dasharray:2.38125, 2.38125;stroke-width:.79375;stroke:#c00"/>
+                            <text class="text" id="makerspace-text" transform="rotate(-31.602)" x="-90.163948" y="115.28221" style="fill:#cc0000;font-family:sans-serif;font-size:13.398px;letter-spacing:0px;line-height:1.25;stroke-width:.33495;word-spacing:0px" xml:space="preserve"><tspan x="-90.163948" y="115.28221" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.33495">MAKERSPACE</tspan></text>
+                            <text class="text" id="jmts-text" transform="rotate(7.473)" x="-98.429993" y="237.48346" style="fill:#cc0000;font-family:sans-serif;font-size:19.487px;letter-spacing:0px;line-height:1.25;stroke-width:.48718;word-spacing:0px" xml:space="preserve"><tspan x="-98.429993" y="237.48346" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.48718">JMTS</tspan></text>
+                            <text class="text" id="mtc-text" transform="rotate(-6.5237)" x="-215.94389" y="147.39645" style="fill:#cc0000;font-family:sans-serif;font-size:20.822px;letter-spacing:0px;line-height:1.25;stroke-width:.52056;word-spacing:0px" xml:space="preserve"><tspan x="-215.94389" y="147.39645" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.52056">MTC</tspan></text>
+                            <text class="text" id="brunsfield-text" transform="rotate(-55.273)" x="-351.36505" y="7.9957151" style="fill:#cc0000;font-family:sans-serif;font-size:12.471px;letter-spacing:0px;line-height:1.25;stroke-width:.31178;word-spacing:0px" xml:space="preserve"><tspan x="-351.36505" y="7.9957151" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.31178">BRUNSFIELD</tspan></text>
+                            <text class="text" id="makerlab1-text" transform="rotate(84.718)" x="207.46466" y="-37.232635" style="fill:#cc0000;font-family:sans-serif;font-size:16.666px;letter-spacing:0px;line-height:1.25;stroke-width:.41664;word-spacing:0px" xml:space="preserve"><tspan x="207.46466" y="-37.232635" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.41664">MAKERLAB</tspan></text>
+                            <text class="text" id="makerlab2-text" transform="rotate(84.718)" x="207.46466" y="-37.232635" style="fill:#cc0000;font-family:sans-serif;font-size:16.666px;letter-spacing:0px;line-height:1.25;stroke-width:.41664;word-spacing:0px" xml:space="preserve"><tspan x="207.46466" y="-37.232635" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.41664">MAKERLAB</tspan></text>
+                            <text class="text" id="sndc-text" transform="rotate(66.936)" x="89.897606" y="77.444839" style="fill:#cc0000;font-family:sans-serif;font-size:6.8546px;letter-spacing:0px;line-height:1.25;stroke-width:.17136;word-spacing:0px" xml:space="preserve"><tspan x="89.897606" y="77.444839" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.17136;text-align:center;text-anchor:middle">DESIGN</tspan><tspan x="89.897606" y="86.268959" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.17136;text-align:center;text-anchor:middle">COMMONS</tspan></text>
+                            <path class="directions" id="sndc-path" d="m-51.898 148.93h-12.371v-16.123h16.397" style="fill:none;stroke-dasharray:2.38125003, 2.38125003;stroke-width:.79375;stroke:#c00"/>
+                        </g>
+                    </svg>
+                </div>
             </div>
         </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.js" integrity="sha256-s1OzWKVKvieWrP3uQ4cPKIdipmDVyUFgDErJ2ko3mtY=" crossorigin="anonymous"></script>
         <script src="script.js"></script>
     </body>
 </html>
