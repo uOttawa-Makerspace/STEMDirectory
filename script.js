@@ -232,8 +232,6 @@ $(document).ready(function () {
     $(".fr").css("display", "none");
 
     $(document).on("click", function () {
-        console.log("click");
-
         if (timer !== null)
             clearTimeout(timer);
 
