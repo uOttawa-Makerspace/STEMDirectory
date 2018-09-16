@@ -107,11 +107,11 @@ p {
 }
 
 .overlay .overlay-content .overlay-text {
-    font-size: 2em;
+    font-size: 4em;
     color: white;
     font-weight: bold;
     background: rgba(204, 0, 0, 0.33);
-    padding: 1.5em;
+    padding: 1em;
 }
 
 .overlay .overlay-content .overlay-text p {
@@ -168,6 +168,7 @@ p {
     color: white;
     overflow: hidden;
     font-family: "Roboto Condensed", sans-serif;
+    font-size: 30px;
 }
 
 #news .item:first-child::before {
@@ -213,13 +214,19 @@ p {
     justify-content: space-between;
 }
 
-.widgets .languages {
-
+.widgets .languages .btn {
+    font-size: 40px;
+    padding: 0.5em;
 }
 
 .widgets .weather {
     font-size: 60px;
     line-height: 1.5;
+}
+
+.widgets .weather .temperature {
+    font-weight: bold;
+    font-size: 30px;
 }
 
 .widgets .time {

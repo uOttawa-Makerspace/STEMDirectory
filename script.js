@@ -54,14 +54,15 @@ $(document).ready(function () {
         var options = {
             "appid": config["weather"]["appid"],
             "lat": config["weather"]["latitude"],
-            "lon": config["weather"]["longitude"]
+            "lon": config["weather"]["longitude"],
+            "units": "metric"
         };
 
         $.get('https://api.openweathermap.org/data/2.5/weather?' + $.param(options)).done(function (data) {
             var weather = data["weather"][0];
             var icon = iconFromWeatherCode(weather["id"], data["sys"]["sunrise"], data["sys"]["sunset"]);
 
-            $(".weather").html('<i class="wi wi-' + icon + '"></i>')
+            $(".weather").html('<span class="temperature">' + data["main"]["temp"] + ' &deg;C</span> <i class="wi wi-' + icon + '"></i>')
         });
 
         setTimeout(getWeather, 15 * 60 * 1000); // 15 minutes
@@ -246,4 +247,6 @@ $(document).ready(function () {
     });
 
     setTime();
+
+    document.addEventListener('contextmenu', event => event.preventDefault());
 });
