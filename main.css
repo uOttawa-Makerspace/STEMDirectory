@@ -246,9 +246,14 @@ p {
     max-height: 100%;
 }
 
+.map text {
+    user-select: none;
+}
+
 .map .text {
     opacity: 1;
     transition: 500ms linear opacity;
+    pointer-events: none;
 }
 
 .map .directions {

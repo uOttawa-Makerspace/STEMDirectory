@@ -172,19 +172,8 @@ $(document).ready(function () {
     function showOverlay() {
         $(".overlay").fadeIn(1000);
     }
-
-    function backToMainNavigation() {
-        $('.ceed-space-info').css('display', 'none');
-        $('.directions, .bg').css('opacity', 0);
-
-        $('.main-navigation').css('display', 'block');
-        $('.text').css('opacity', 1);
-    }
-
-    // navigation buttons
-    $('.location-btn').on('click', function () {
-        var targetName = $(this).data('target');
-
+    
+    function showPathTo(targetName) {
         $('.directions, .bg, .text').css('opacity', 0);
         $('.main-navigation').css('display', 'none');
 
@@ -197,7 +186,23 @@ $(document).ready(function () {
         $('.ceed-space-info .description.en').text(info[targetName]["description_en"]);
         $('.ceed-space-info .description.fr').text(info[targetName]["description_fr"]);
         $('.ceed-space-info').css('display', 'block');
+    }
+
+    function backToMainNavigation() {
+        $('.ceed-space-info').css('display', 'none');
+        $('.directions, .bg').css('opacity', 0);
+
+        $('.main-navigation').css('display', 'block');
+        $('.text').css('opacity', 1);
+    }
+
+    // navigation buttons
+    $('.location-btn').on('click', function () {
+        var targetName = $(this).data('target');
+        showPathTo(targetName);
     });
+
+    
 
     $('.sidebar .back-btn').on('click', function () {
         backToMainNavigation();
@@ -249,4 +254,10 @@ $(document).ready(function () {
     setTime();
 
     document.addEventListener('contextmenu', event => event.preventDefault());
+
+    $('.map path[id$="-bg"]').on("click", function () {
+        var $this = $(this);
+        var target = $this.attr('id').split('-')[0];
+        showPathTo(target);
+    });
 });
