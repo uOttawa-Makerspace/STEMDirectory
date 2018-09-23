@@ -175,7 +175,7 @@ $(document).ready(function () {
     
     function showPathTo(targetName) {
         $('.directions, .bg, .text').css('opacity', 0);
-        $('.main-navigation').css('opacity', 0);
+        $('.main-navigation').css({'opacity': 0, 'pointer-events': 'none'});
 
         $('#' + targetName + '-path').css('opacity', 1);
         $('#' + targetName + '-bg').css('opacity', 1);
@@ -185,14 +185,14 @@ $(document).ready(function () {
         $('.ceed-space-info .name.fr').text(info[targetName]["name_fr"]);
         $('.ceed-space-info .description.en').text(info[targetName]["description_en"]);
         $('.ceed-space-info .description.fr').text(info[targetName]["description_fr"]);
-        $('.ceed-space-info').css('opacity', 1);
+        $('.ceed-space-info').css({'opacity': 1, 'pointer-events': 'auto'});
     }
 
     function backToMainNavigation() {
-        $('.ceed-space-info').css('opacity', 0);
+        $('.ceed-space-info').css({'opacity': 0, 'pointer-events': 'none'});
         $('.directions, .bg').css('opacity', 0);
 
-        $('.main-navigation').css('opacity', 1);
+        $('.main-navigation').css({'opacity': 1, 'pointer-events': 'auto'});
         $('.text').css('opacity', 1);
     }
 
