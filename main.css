@@ -198,8 +198,15 @@ p {
     text-transform: uppercase;
 }
 
-.ceed-space-info {
-    display: none;
+.fade-container {
+    position: relative;
+}
+
+.fade-container > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 500ms linear opacity;
 }
 
 .ceed-space-info .name {

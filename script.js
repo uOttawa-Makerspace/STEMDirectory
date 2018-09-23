@@ -175,7 +175,7 @@ $(document).ready(function () {
     
     function showPathTo(targetName) {
         $('.directions, .bg, .text').css('opacity', 0);
-        $('.main-navigation').css('display', 'none');
+        $('.main-navigation').css('opacity', 0);
 
         $('#' + targetName + '-path').css('opacity', 1);
         $('#' + targetName + '-bg').css('opacity', 1);
@@ -185,14 +185,14 @@ $(document).ready(function () {
         $('.ceed-space-info .name.fr').text(info[targetName]["name_fr"]);
         $('.ceed-space-info .description.en').text(info[targetName]["description_en"]);
         $('.ceed-space-info .description.fr').text(info[targetName]["description_fr"]);
-        $('.ceed-space-info').css('display', 'block');
+        $('.ceed-space-info').css('opacity', 1);
     }
 
     function backToMainNavigation() {
-        $('.ceed-space-info').css('display', 'none');
+        $('.ceed-space-info').css('opacity', 0);
         $('.directions, .bg').css('opacity', 0);
 
-        $('.main-navigation').css('display', 'block');
+        $('.main-navigation').css('opacity', 1);
         $('.text').css('opacity', 1);
     }
 
@@ -201,8 +201,6 @@ $(document).ready(function () {
         var targetName = $(this).data('target');
         showPathTo(targetName);
     });
-
-    
 
     $('.sidebar .back-btn').on('click', function () {
         backToMainNavigation();
