@@ -3,5 +3,9 @@
     "appid": "openweathermap-appid",
     "latitude": 0.000000,
     "longitude": 0.000000
+  },
+  "eventbrite": {
+    "organizer_id": 0,
+    "token": "eventbrite-api-token"
   }
 }

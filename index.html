@@ -9,6 +9,7 @@
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed">
         <link rel="stylesheet" href="assets/css/weather-icons.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <link rel="stylesheet" href="main.css"/>
     </head>
     <body>
@@ -41,8 +42,8 @@
                     <hr/>
                     <div class="fade-container">
                         <div class="main-navigation">
-                            <h1 class="header"><span class="en">CEED Spaces</span><span class="fr">Espaces CGEC</span></h1>
                             <nav class="navigation">
+                                <h1 class="header"><span class="en">CEED Spaces</span><span class="fr">Espaces CGEC</span></h1>
                                 <button class="btn location-btn" type="button" data-target="makerspace">Richard l'Abbé Makerspace</button>
                                 <button class="btn location-btn" type="button" data-target="makerlab1">Makerlab 1</button>
                                 <button class="btn location-btn" type="button" data-target="makerlab2">Makerlab 2</button>
@@ -50,6 +51,9 @@
                                 <button class="btn location-btn" type="button" data-target="brunsfield"><span class="en">Brunsfield Centre</span><span class="fr">Centre Brunsfield</span></button>
                                 <button class="btn location-btn" type="button" data-target="jmts"><span class="en">John McEntyre Team Space</span><span class="fr">Espace de collaboration John McEntyre</span></button>
                                 <button class="btn location-btn" type="button" data-target="sndc"><span class="en">Simon Nehme Design Commons</span><span class="fr">Espace de conception Simon Nehme</span></button>
+                                <hr/>
+                                <h1 class="header">Information</h1>
+                                <button id="events-button" class="btn btn-green" type="button"><span class="en">Events</span><span class="fr">Événements</span></button>
                             </nav>
                         </div>
                         <div class="ceed-space-info">
@@ -57,6 +61,16 @@
                             <h1 class="name fr"></h1>
                             <p class="description en"></p>
                             <p class="description fr"></p>
+                            <button class="btn back-btn" type="button"><span class="en">Back</span><span class="fr">Retour</span></button>
+                        </div>
+                        <div class="eventbrite-events">
+                            <button class="btn back-btn" type="button"><span class="en">Back</span><span class="fr">Retour</span></button>
+                            <div class="event-list"></div>
+                        </div>
+                        <div class="eventbrite-event-details">
+                            <h1 class="name"></h1>
+                            <p class="date"></p>
+                            <p class="description"></p>
                             <button class="btn back-btn" type="button"><span class="en">Back</span><span class="fr">Retour</span></button>
                         </div>
                     </div>

@@ -3,6 +3,7 @@
 $(document).ready(function () {
     var config = {};
     var timer = null;
+    var navigationStack = [];
 
     var info = {
         "makerspace": {
@@ -155,6 +156,65 @@ $(document).ready(function () {
         return "na";
     }
 
+    function getEvents() {
+        var options = {
+            "organizer.id": config["eventbrite"]["organizer_id"],
+            "sort_by": "date",
+            "token": config["eventbrite"]["token"]
+        };
+
+        $.get('https://www.eventbriteapi.com/v3/events/search/?' + $.param(options))
+            .done(function (data) {
+                populateEvents(data);
+            });
+    }
+
+    function populateEvents(data) {
+        var $events = $('.eventbrite-events .event-list');
+        $events.empty();
+
+        var months = [
+            "January", "February", "March", "April", "May", "June", "July",
+            "August", "September", "October", "November", "December"
+        ];
+
+        for (const event of data["events"]) {
+            $events.append('<hr/>');
+
+            var $event = $('<div class="event">');
+            var $info = $('<div class="info">');
+            var $button = $('<button class="btn info-btn"><i class="fa fa-info-circle fa-2x"></i></button>');
+
+            $button.on("click", function () {
+                showEvent(event);
+            });
+
+            var start = new Date(event["start"]["local"]);
+            var end = new Date(event["end"]["local"]);
+
+            var day = months[start.getMonth()] + " " + start.getDate();
+            var startTime = start.getHours().toString().padStart(2, "0") + ":" + start.getMinutes().toString().padStart(2, "0");
+            var endTime = end.getHours().toString().padStart(2, "0") + ":" + end.getMinutes().toString().padStart(2, "0");
+
+            $info.append('<h1>' + event["name"]["text"] + '</h1>');
+            $info.append(`<p>${day}, ${startTime} &ndash; ${endTime}</p>`);
+
+            $event.append($info);
+            $event.append($button);
+            
+            $events.append($event);
+        }
+    }
+
+    function showEvent(event) {
+        var $event = $('.eventbrite-event-details');
+
+        $event.find('.name').text(event["name"]["text"]);
+        $event.find('.description').text(event["description"]["text"]);
+
+        navigateToPage(".eventbrite-event-details");
+    }
+
     function setTime() {
         var time = new Date();
 
@@ -175,7 +235,6 @@ $(document).ready(function () {
     
     function showPathTo(targetName) {
         $('.directions, .bg, .text').css('opacity', 0);
-        $('.main-navigation').css({'opacity': 0, 'pointer-events': 'none'});
 
         $('#' + targetName + '-path').css('opacity', 1);
         $('#' + targetName + '-bg').css('opacity', 1);
@@ -185,15 +244,39 @@ $(document).ready(function () {
         $('.ceed-space-info .name.fr').text(info[targetName]["name_fr"]);
         $('.ceed-space-info .description.en').text(info[targetName]["description_en"]);
         $('.ceed-space-info .description.fr').text(info[targetName]["description_fr"]);
-        $('.ceed-space-info').css({'opacity': 1, 'pointer-events': 'auto'});
+
+        navigateToPage('.ceed-space-info');
     }
 
-    function backToMainNavigation() {
-        $('.ceed-space-info').css({'opacity': 0, 'pointer-events': 'none'});
-        $('.directions, .bg').css('opacity', 0);
+    function navigateToPage(pageName) {
+        showPage(pageName);
+        navigationStack.push(pageName);
+    }
 
-        $('.main-navigation').css({'opacity': 1, 'pointer-events': 'auto'});
-        $('.text').css('opacity', 1);
+    function navigateBack() {
+        navigationStack.pop();
+        
+        var pageName = "";
+
+        if (navigationStack.length > 0)
+            pageName = navigationStack[navigationStack.length - 1];
+        else
+            pageName = ".main-navigation";
+
+        showPage(pageName);
+    }
+
+    function showPage(pageName) {
+        if (pageName === ".ceed-space-info") {
+            $('.directions, .bg').css('opacity', 1);
+            $('.text').css('opacity', 0);
+        } else {
+            $('.directions, .bg').css('opacity', 0);
+            $('.text').css('opacity', 1);
+        }
+
+        $('.fade-container > div').css({'opacity': 0, 'pointer-events': 'none'});
+        $(pageName).css({'opacity': 1, 'pointer-events': 'auto'});
     }
 
     // navigation buttons
@@ -202,8 +285,8 @@ $(document).ready(function () {
         showPathTo(targetName);
     });
 
-    $('.sidebar .back-btn').on('click', function () {
-        backToMainNavigation();
+    $('.back-btn').on('click', function () {
+        navigateBack();
     });
 
     // news marquee
@@ -217,7 +300,8 @@ $(document).ready(function () {
     });
 
     $(".overlay").on("click", function () {
-        backToMainNavigation();
+        navigationStack = [];
+        showPage('.main-navigation'); // don't add to navigation stack
         $(".overlay").fadeOut(1000);
     });
 
@@ -247,6 +331,7 @@ $(document).ready(function () {
     $.get('config.json').done(function (data) {
         config = data;
         getWeather();
+        getEvents();
     });
 
     setTime();
@@ -258,4 +343,8 @@ $(document).ready(function () {
         var target = $this.attr('id').split('-')[0];
         showPathTo(target);
     });
+
+    $("#events-button").on("click", function () {
+        navigateToPage(".eventbrite-events");
+    })
 });

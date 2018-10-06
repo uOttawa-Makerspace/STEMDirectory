@@ -13,6 +13,7 @@ nav, output, ruby, section, summary, time, mark, audio, video {
     vertical-align: baseline;
 }
 
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
@@ -134,6 +135,23 @@ p {
     color: white;
 }
 
+.event {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event p {
+    margin: 0;
+}
+
+.event .info {
+}
+
+.event .info-btn {
+    width: auto;
+    height: auto;
+}
+
 .navigation .btn + .btn {
     margin-top: 10px;
 }
@@ -141,6 +159,11 @@ p {
 .btn-blue {
     color: #00BFFF;
     border-color: #00BFFF;
+}
+
+.btn-green {
+    color: #00FF00;
+    border-color: #00FF00;
 }
 
 .btn-inline {
@@ -183,7 +206,7 @@ p {
 
 .sidebar {
     background: linear-gradient(-45deg, rgba(143, 0, 26, 1),rgba(34, 116, 165, 1));
-    width: 350px;
+    width: 25%;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -200,17 +223,42 @@ p {
 
 .fade-container {
     position: relative;
+    width: 100%;
+    height: 100%;
+    flex: 1 1 0;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
 }
 
 .fade-container > div {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
     transition: 500ms linear opacity;
+    overflow-y: auto;
 }
 
 .ceed-space-info .name {
     font-size: 20px;
+}
+
+.ceed-space-info .description {
+    font-size: 28px;
 }
 
 .widgets {
