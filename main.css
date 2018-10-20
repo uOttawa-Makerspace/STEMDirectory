@@ -289,6 +289,10 @@ p {
     margin-top: 0.2em;
 }
 
+.pulse {
+    animation: pulse 1.5s linear infinite;
+}
+
 .map-container {
     flex: 1;
     margin: 20px;
@@ -325,7 +329,7 @@ p {
 
 .map circle.pulse {
     transform-origin: -51.908px 148.89px;
-    animation: pulse 1.5s linear infinite;
+    animation: pulse-fade 1.5s linear infinite;
 }
 
 @keyframes dash {
@@ -334,7 +338,7 @@ p {
     }
 }
 
-@keyframes pulse {
+@keyframes pulse-fade {
     0% {
         transform: scale(1);
         opacity: 1;
@@ -342,5 +346,17 @@ p {
     100% {
         transform: scale(3);
         opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
     }
 }
