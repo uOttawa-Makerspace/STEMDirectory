@@ -267,10 +267,7 @@ $(document).ready(function () {
     }
 
     function showPage(pageName) {
-        if (pageName === ".ceed-space-info") {
-            $('.directions, .bg').css('opacity', 1);
-            $('.text').css('opacity', 0);
-        } else {
+        if (pageName !== ".ceed-space-info") {
             $('.directions, .bg').css('opacity', 0);
             $('.text').css('opacity', 1);
         }
