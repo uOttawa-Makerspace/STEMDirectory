@@ -1,0 +1,11 @@
+{
+  "weather": {
+    "appid": "11982685ff4dcb15e261c0cabe987f72",
+    "latitude": 45.41117 ,
+    "longitude": -75.69812
+  },
+  "eventbrite": {
+    "organizer_id": 0,
+    "token": "eventbrite-api-token"
+  }
+}

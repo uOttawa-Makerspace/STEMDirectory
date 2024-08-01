@@ -53,8 +53,12 @@
                                 <button class="btn location-btn" type="button" data-target="jmts"><span class="en">John McEntyre Team Space</span><span class="fr">Espace de collaboration John McEntyre</span></button>
                                 <button class="btn location-btn" type="button" data-target="sndc"><span class="en">Simon Nehme Design Commons</span><span class="fr">Espace de conception Simon Nehme</span></button>
                                 <hr/>
+                                
                                 <h1 class="header">Information</h1>
+                                <!--
                                 <button id="events-button" class="btn btn-green" type="button"><span class="en">Events</span><span class="fr">Événements</span></button>
+                                -->
+                                <img src="images/frame2.png" alt="QR code to website" class="center">
                             </nav>
                         </div>
                         <div class="ceed-space-info">
@@ -64,20 +68,23 @@
                             <p class="description fr"></p>
                             <button class="btn back-btn" type="button"><span class="en">Back</span><span class="fr">Retour</span></button>
                         </div>
+                        
                         <div class="eventbrite-events scroll-shadow">
                             <button class="btn back-btn" type="button"><span class="en">Back</span><span class="fr">Retour</span></button>
-                            <p style="padding-top: 1em"> <!-- fix at some point to not use style -->
+                            <p style="padding-top: 1em"> 
                                 <span class="en">Please note that event <strong>descriptions</strong> are only available in English, but all workshops are run by bilingual staff.</span>
                                 <span class="fr">Veuillez noter que les <strong>descriptions</strong> des événements sont seulement disponibles en anglais, mais les ateliers sont tous animés par des employés bilingues.</span>
                             </p>
                             <div class="event-list"></div>
                         </div>
+                        <!--
                         <div class="eventbrite-event-details">
                             <h1 class="name"></h1>
                             <p class="date"></p>
                             <p class="description"></p>
                             <button class="btn back-btn" type="button"><span class="en">Back</span><span class="fr">Retour</span></button>
                         </div>
+                        -->
                     </div>
                 </div>
                 <div class="map-container">
@@ -90,8 +97,8 @@
                             <path class="bg" id="mtc-bg" d="m-206.49 138.07-0.37798 46.964h54.24l-0.0945-46.964z" style="fill-opacity:.29412;fill:#c00"/>
                             <path d="m77.559 186.59h-26.789v40.632h3.449v3.7798m0 4.2522v2.4096h-3.6853v49.184" style="fill:none;stroke-width:1.3229;stroke:#000"/>
                             <path class="bg" id="sndc-bg" d="m-51.993 93.654 0.0945 41.861h26.08l0.31586-41.483z" style="fill-opacity:.29412;fill:#c00"/>
-                            <path class="bg" id="makerlab1-bg" d="m77.559 186.59h-26.789v40.632h3.449v10.442h-3.6853l-3e-6 57.925 27.799-0.0347z" style="fill-opacity:.29412;fill:#c00"/>
-                            <path class="bg" id="makerlab2-bg" d="m77.559 186.59h-26.789v40.632h3.449v10.442h-3.6853l-3e-6 57.925 27.799-0.0347z" style="fill-opacity:.29412;fill:#c00"/>
+                            <path class="bg" id="makerlab1-bg" d="M 77.559,186.59 H 50.77 v 40.632 h 3.449 v 10.442 l 23.34,0z" style="fill-opacity:.29412;fill:#c00"/>
+                            <path class="bg" id="makerlab2-bg" d="m 78.333,237.664 -24.114,0 h -3.6853 l -3e-6,57.925 27.799303,-0.035z" style="fill-opacity:.29412;fill:#c00"/>
                             <path d="m78.332 94.032v201.52h-284.91v-201.52z" style="fill:none;stroke-width:2.6458;stroke:#000"/>
                             <path d="m-51.993 93.654v37.42" style="fill:none;stroke-width:1.3229;stroke:#000"/>
                             <path transform="matrix(.26458 0 0 .26458 -211.12 71.788)" d="m943.48 291.57h49.375v-207.14" style="fill:none;stroke-width:5;stroke:#000"/>
@@ -127,8 +134,8 @@
                             <text class="text en" id="jmts-text-en" transform="rotate(7.473)" x="-98.429993" y="237.48346" style="fill:#cc0000;font-family:sans-serif;font-size:19.487px;letter-spacing:0px;line-height:1.25;stroke-width:.48718;word-spacing:0px" xml:space="preserve"><tspan x="-98.429993" y="237.48346" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.48718">JMTS</tspan></text>
                             <text class="text en" id="mtc-text-en" transform="rotate(-6.5237)" x="-215.94389" y="147.39645" style="fill:#cc0000;font-family:sans-serif;font-size:20.822px;letter-spacing:0px;line-height:1.25;stroke-width:.52056;word-spacing:0px" xml:space="preserve"><tspan x="-215.94389" y="147.39645" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.52056">MTC</tspan></text>
                             <text class="text" id="brunsfield-text" transform="rotate(-55.273)" x="-351.36505" y="7.9957151" style="fill:#cc0000;font-family:sans-serif;font-size:12.471px;letter-spacing:0px;line-height:1.25;stroke-width:.31178;word-spacing:0px" xml:space="preserve"><tspan x="-351.36505" y="7.9957151" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.31178">BRUNSFIELD</tspan></text>
-                            <text class="text" id="makerlab1-text" transform="rotate(84.718)" x="207.46466" y="-37.232635" style="fill:#cc0000;font-family:sans-serif;font-size:16.666px;letter-spacing:0px;line-height:1.25;stroke-width:.41664;word-spacing:0px" xml:space="preserve"><tspan x="207.46466" y="-37.232635" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.41664">MAKERLAB</tspan></text>
-                            <text class="text" id="makerlab2-text" transform="rotate(84.718)" x="207.46466" y="-37.232635" style="fill:#cc0000;font-family:sans-serif;font-size:16.666px;letter-spacing:0px;line-height:1.25;stroke-width:.41664;word-spacing:0px" xml:space="preserve"><tspan x="207.46466" y="-37.232635" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.41664">MAKERLAB</tspan></text>
+                            <text class="text" id="makerlab1-text" x="-99.59173" y="293.4055" xml:space="preserve" fill="#cc0000" font-family="sans-serif" font-size="12px" stroke-width="0.41664" stroke="null" transform="rotate(74 63.402 212.104) matrix(0.539077 0 0 0.779164 95.6253 -7.67336)"><tspan x="-99.59173" y="286.17287" fill="#cc0000" font-family="'Roboto Condensed'" font-weight="bold" stroke-width="0.41664" id="svg_2" stroke="null">MAKERLAB 1</tspan></text>
+                            <text class="text" id="makerlab2-text" x="-179.19428" y="348.19838" xml:space="preserve" fill="#cc0000" font-family="sans-serif" font-size="12px" stroke-width="0.41664" stroke="null" transform="rotate(73 63.9692 267.085) matrix(0.515822 0 0 0.77387 135.766 -5.23335)"><tspan x="-179.19428" y="355.96574" fill="#cc0000" font-family="'Roboto Condensed'" font-weight="bold" stroke-width="0.41664" id="svg_2" stroke="null">MAKERLAB 2</tspan></text>
                             <text class="text en" id="sndc-text-en" transform="rotate(66.936)" x="89.897606" y="77.444839" style="fill:#cc0000;font-family:sans-serif;font-size:6.8546px;letter-spacing:0px;line-height:1.25;stroke-width:.17136;word-spacing:0px" xml:space="preserve"><tspan x="89.897606" y="77.444839" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.17136;text-align:center;text-anchor:middle">DESIGN</tspan><tspan x="89.897606" y="86.268959" style="fill:#cc0000;font-family:'Roboto Condensed';font-weight:bold;stroke-width:.17136;text-align:center;text-anchor:middle">COMMONS</tspan></text>
                             <path class="directions" id="mtc-path" d="m-51.898 148.93h-12.371v-11.846h-79.564v7.2619h-13.796" style="fill:none;stroke-dasharray:2.38125, 2.38125;stroke-width:.79375;stroke:#c00"/>
                             <path class="directions" id="brunsfield-path" d="m-51.898 148.93h-12.371v-11.846h-79.564v119.24h-13.702" style="fill:none;stroke-dasharray:2.38125003, 2.38125003;stroke-width:.79375;stroke:#c00"/>
