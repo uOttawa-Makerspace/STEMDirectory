@@ -7,16 +7,19 @@ Display is hooked up to a Zotac box running Ubuntu.
 
 Webpage runs locally oon the machine. 
 
-# To update the webpage on the display itself, connect a keyboard to the machine and press ALT+F4. 
+## To update the webpage on the display itself, connect a keyboard to the machine and press ALT+F4. 
 
 In the shell add a new usb drive using following commands:
 
   fdisk -l 
+  
   // this will show a list of all the disks connected to the system
+  
   mkdir  /media/usb-drive 
+  
   mount /dev/sd* /media/usb-drive //replace * with the drive letter/number
 
-//Then copy the files from the USB to the webpage directory using:
+Then copy the files from the USB to the webpage directory using:
 
   sudo cp STEMDirectory /var/www/html/ 
 
