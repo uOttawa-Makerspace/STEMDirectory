@@ -17,11 +17,11 @@ In the shell add a new usb drive using following commands:
   
   mkdir  /media/usb-drive 
   
-  mount /dev/sd* /media/usb-drive //replace * with the drive letter/number
+  mount /dev/sdb* /media/usb-drive //replace * with the drive letter/number
 
 Then copy the files from the USB to the webpage directory using:
 
-  sudo cp STEMDirectory /var/www/html/ 
+  sudo cp -r STEMDirectory /var/www/html/ 
 
 then run retart using:
 
